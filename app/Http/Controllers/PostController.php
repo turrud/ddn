@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Support\Str;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 
@@ -13,7 +15,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('post.index');
+        $posts = Post::latest()->get();
+        return view('post.index', compact('posts'));
     }
 
     /**
@@ -29,7 +32,28 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        //
+            $data = $request->validate([
+            'nama' => 'required|string',
+            'deskripsi' => 'required|string',
+            'excerpt' => 'required|string',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Sesuaikan dengan jenis gambar yang diizinkan dan ukuran maksimum
+        ]);
+
+        // Upload gambar
+        $gambarPath = $request->file('gambar')->store('uploads', 'public');
+
+        $validatedData['excerpt'] = Str::limit(strip_tags($request->deskripsi), 10);
+
+        // Simpan posting
+        $post = new Post([
+            'nama' => $data['nama'],
+            'deskripsi' => $data['deskripsi'],
+            'gambar' => $gambarPath,
+            'excerpt' => $validatedData['excerpt'],
+        ]);
+        $post->save();
+
+        return redirect('/news');
     }
 
     /**
@@ -37,7 +61,9 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('post.show', [
+            'post' => $post
+        ]);
     }
 
     /**

@@ -1,13 +1,13 @@
 @extends('layout.main')
 
-@section('title', 'Service')
+@section('title', 'Partner')
 
 @section('content')
-@include('layout.nav-service')
+@include('layout.nav-contact')
   <div class="container">
-    <div class="row">
+    <div class="row text-center">
       <div class="col">
-        <h1 class="mt-3">Service</h1>
+        <h1 class="mt-3">Partner</h1>
       </div>
     </div>
   </div>

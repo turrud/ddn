@@ -15,6 +15,30 @@ class ServiceController extends Controller
     {
         return view('service.index');
     }
+    public function architecture()
+    {
+        return view('service.architecture');
+    }
+    public function interiorDesign()
+    {
+        return view('service.interiorDesign');
+    }
+    public function interiorPublic()
+    {
+        return view('service.interiorPublic');
+    }
+    public function boothDesign()
+    {
+        return view('service.boothDesign');
+    }
+    public function virtualOffice()
+    {
+        return view('service.virtualOffice');
+    }
+    public function weddingDecoration()
+    {
+        return view('service.weddingDecoration');
+    }
 
     /**
      * Show the form for creating a new resource.

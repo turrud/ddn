@@ -15,6 +15,30 @@ class ContactController extends Controller
     {
         return view('contact.index');
     }
+    public function service()
+    {
+        return view('contact.service');
+    }
+    public function partner()
+    {
+        return view('contact.partner');
+    }
+    public function invest()
+    {
+        return view('contact.invest');
+    }
+    public function course()
+    {
+        return view('contact.course');
+    }
+    public function freelance()
+    {
+        return view('contact.freelance');
+    }
+    public function donation()
+    {
+        return view('contact.donation');
+    }
 
     /**
      * Show the form for creating a new resource.

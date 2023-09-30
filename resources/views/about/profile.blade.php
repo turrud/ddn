@@ -9,7 +9,7 @@
         <h1 class="display-5 text-center mb-4">Company History</h1>
         <hr class="mx-auto col-md-9">
         <div class="row justify-content-center">
-            <div class="" style="width: 7.5cm;height: 7.5cm">
+            <div style="width: 7.5cm;height: 7.5cm">
                 <img class="img-fluid mb-3" src="{{ asset('images/sejarah/sejarah.jpg') }}" alt="img-sejarah">
             </div>
             <div class="col-md-6 j">

@@ -15,6 +15,30 @@ class StoreController extends Controller
     {
         return view('store.index');
     }
+    public function dFurniture()
+    {
+        return view('store.3dFurniture');
+    }
+    public function dArchitecture()
+    {
+        return view('store.3dArchitecture');
+    }
+    public function dBooth()
+    {
+        return view('store.3dBooth');
+    }
+    public function furniture()
+    {
+        return view('store.furniture');
+    }
+    public function decoration()
+    {
+        return view('store.decoration');
+    }
+    public function florist()
+    {
+        return view('store.florist');
+    }
 
     /**
      * Show the form for creating a new resource.

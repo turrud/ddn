@@ -15,16 +15,16 @@
           <a href="{{ route('about') }}/profile" class="nav-link {{ Request::is('about*') ? 'active' : '' }}">About</a>
         </li>
         <li class="nav-item">
-          <a href="{{ route('store') }}" class="nav-link {{ Request::is('store') ? 'active' : '' }}">Store</a>
+          <a href="{{ route('store') }}/3d-furniture" class="nav-link {{ Request::is('store*') ? 'active' : '' }}">Store</a>
         </li>
         <li class="nav-item">
-          <a href="{{ route('service') }}" class="nav-link {{ Request::is('service') ? 'active' : '' }}">Services</a>
+          <a href="{{ route('service') }}/architecture" class="nav-link {{ Request::is('service*') ? 'active' : '' }}">Services</a>
         </li>
         <li class="nav-item">
-          <a href="{{ route('news') }}" class="nav-link {{ Request::is('news') ? 'active' : '' }}">News</a>
-        </li>
+            <a class="nav-link {{ Request::is('news*') ? 'active' : '' }}" href="/news">News</a>
+          </li>
         <li class="nav-item">
-          <a href="{{ route('contact') }}" class="nav-link {{ Request::is('contact') ? 'active' : '' }}">Contact Us</a>
+          <a href="{{ route('contact') }}/service" class="nav-link {{ Request::is('contact*') ? 'active' : '' }}">Contact Us</a>
         </li>
       </ul>
     </div>

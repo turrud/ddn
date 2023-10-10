@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1 class="mt-3">Contact</h1>
+        <footer style="font-size: 30px" class="blockquote-footer mt-4">Contact Us</footer>
       </div>
     </div>
   </div>

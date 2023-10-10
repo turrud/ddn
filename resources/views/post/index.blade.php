@@ -5,7 +5,8 @@
 @section('content')
   <div class="container">
     <div class="display-5 text-center mb-5">
-        Our News
+        <h4 class="section-title ">"Breaking News"</h4>
+        <h1 class="display-6 mb-4 ">Turning Dreams into Homes - Your Vision, Our Expertise</h1>
     </div>
     <div class="row">
         @foreach ($posts as $post )
